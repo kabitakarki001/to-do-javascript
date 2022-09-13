@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>My todo app</title>
+    </head>
+    <body>
+        <button>Press me</button>
+        <div>get groceries</div>
+        <div>wash car</div>
+        <div>make dinner</div>
+        <script>
+            let todo1 = 'Get groceries';
+            let todo2 = 'Wash car';
+            let todo3 = 'make dinner';
+            
+            
+            let element = document.createElement('div'); //html element creation
+            element.innerText = todo1;              //putting the element to text to get value from variable
+            document.body.appendChild(element);  // add element to body
+
+           
+            // we can reassign a variable to another value
+            element = document.createElement('div'); 
+            element.innerText = todo2;             
+            document.body.appendChild(element);
+
+            function addTodo(todoTitle){    // define functiion & add parameter variable
+                element = document.createElement('div'); 
+            element.innerText = todoTitle;             
+            document.body.appendChild(element);
+            }
+
+            addTodo(todo1); //functions
+           addTodo(todo2);
+           addTodo(todo3);
+            
+           todos.pop(); // array+ function
+
+console.log('hello'.toUpperCase()); // string+ function
+
+<button onClick="todos.push('new todo');" >Press me</button>// put html code in button to push new list. html code is called attribute
+            
+/*instead of writing html attribute we 
+caan create function like below*/
+function addTodo(){
+            todos.push('new todo');
+           }
+           <button onClick="addTodo()" >Press me</button> 
+
+           //get value by id
+           function addTodo(){
+            let textbox = document.getElementById('todo-title');
+            let title = textbox.value;
+            todos.push('title');
+           }
+           function func(){
+                const num1 = 1;
+                const num5 = 5;
+
+                if (num1 < num5){
+                    console.log('run this code');
+
+                }
+                else{
+                    console.log('other');
+
+                }
+             }
+
+         
+        </script>
+          <!--input type can be set get user values & get define value name so that JS can call it by .value-->
+          <input id="todo-title" type="text" /> 
+    </body>
+</html>
